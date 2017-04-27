@@ -1,0 +1,7 @@
+<h1>Books</h1>
+<ul>
+{{#each model.books as |book|}}
+  <li>{{book.title}} by: {{#link-to 'indiv-author' book.author.id}}{{book.author.first}} {{book.author.last}}{{/link-to}}</li>
+  {{delete-book destroyBook="destroyBook" book=book}}
+{{/each}}
+</ul>

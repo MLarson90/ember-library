@@ -1,0 +1,6 @@
+
+{{new-author author=model saveAuthor="saveAuthor"}}
+<h1> Authors</h1>
+{{#each model.authors as |author|}}
+  {{author-tile author=author}}
+{{/each}}

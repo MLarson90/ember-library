@@ -1,0 +1,8 @@
+<h2>{{author.first}} {{author.last}}</h2>
+
+<h4>Books:</h4>
+  <ul>
+      {{#each author.books as |book|}}
+        {{show-book book=book}}
+      {{/each}}
+  </ul>

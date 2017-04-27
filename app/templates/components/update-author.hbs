@@ -1,0 +1,13 @@
+{{#if updateAuthor}}
+<form class="newPost">
+  <label for="edit_first"></label>
+  {{input value=edit_first id="edit_first" type="text" placeholder="First Name" required=true}}
+  <label for="edit_last"></label>
+  {{input value=edit_last id="edit_last" type="text" placeholder="Last Name" required=true}}
+
+  <button {{action 'update' author}}>Save Changes</button>
+</form>
+{{else}}
+  <button {{action 'showAuthor'}}>Edit Author</button>
+{{/if}}
+<button {{action 'delete' author}}>Delete</button>

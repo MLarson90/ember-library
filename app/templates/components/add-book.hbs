@@ -1,0 +1,11 @@
+{{#if addNewBook}}
+<form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      {{input value=title id="title"}}
+    </div>
+    <button {{action 'saveBook'}}>Submit</button>
+  </form>
+  {{else}}
+  <button {{action 'showBookForm'}}>Add Book</button>
+{{/if}}

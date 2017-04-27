@@ -1,0 +1,18 @@
+{{#if addNewAuthor}}
+<form>
+   <div class="form-group">
+     <label for="first">First Name</label>
+     {{input value=first id="first"}}
+   </div>
+
+   <div class="form-group">
+     <label for="last">Last Name</label>
+     {{input value=last id="last"}}
+   </div>
+ <div class="form-group">
+   <button {{action 'saveAuthor'}}>Save</button>
+ </div>
+</form>
+{{else}}
+<button {{action 'newAuthorFormShow'}}>Add Author</button>
+{{/if}}
